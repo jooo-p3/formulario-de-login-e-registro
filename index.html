@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulários de Login e Registro">
+  <title>Formulários de Login e Registro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <!--Form Login-->
+    <div class="form-container form-login-container">
+      <div class="form-header">
+        <img src="/img/lightning-fill.svg" alt="lightning">
+        <h1>Bem vindo</h1>
+        <span>Não tem uma conta? <a href="#" id="register-link">Registre-se</a></span>
+      </div>
+      <form action="#" id="form-login">
+        <div id="login-email-field" class="input-field">
+          <label for="login-email">E-mail</label>
+          <div class="input-wrap">
+            <input id="login-email" name="login-email" type="email" placeholder="Digite seu e-mail" autocomplete="off">
+          </div>
+          <span>
+            <img src="/img/error-circle.svg" alt="error circle">
+            <p>Campo obrigatório.</p>
+          </span>
+        </div>
+        <div id="login-psw-field" class="input-field">
+          <label for="login-psw">Senha</label>
+          <div class="input-wrap">
+            <input id="login-psw" name="login-psw" type="password" placeholder="Digite sua senha" autocomplete="off">
+            <img id="login-eye-icon" src="/img/eye-close.svg" alt="eye icon">
+          </div>
+          <span>
+            <img src="/img/error-circle.svg" alt="error circle">
+            <p>Campo obrigatório.</p>
+          </span>
+        </div>
+        <div class="psw-wrap">
+          <div>
+            <input id="remember-psw" type="checkbox">
+            <label for="remember-psw">Lembrar senha?</label>
+          </div>
+          <div><a href="#">Esqueci a senha</a></div>
+        </div>
+        <button type="submit">Entrar</button>
+        <span class="line"></span>
+        <button type="button"><img src="/img/google-logo.svg" alt="google logo"> Entrar com o
+          Google</button>
+      </form>
+    </div>
+    <!--Form Register-->
+    <div class="form-container form-register-container">
+      <div class="form-header">
+        <img src="/img/lightning-fill.svg" alt="lightning">
+        <h1>Crie sua conta</h1>
+        <span>Já tem uma conta? <a href="#" id="login-link">Entrar</a></span>
+      </div>
+      <form action="https://www.youtube.com/watch?v=RBT8Q6-cBsk" id="form-register">
+        <div id="register-name-field" class="input-field">
+          <label for="register-name">Nome</label>
+          <div class="input-wrap">
+            <input id="register-name" name="register-name" type="text" placeholder="Insira seu nome" autocomplete="off">
+          </div>
+          <span>
+            <img src="/img/error-circle.svg" alt="error circle">
+            <p>Insira seu nome.</p>
+          </span>
+        </div>
+        <div id="register-email-field" class="input-field">
+          <label for="register-email">E-mail</label>
+          <div class="input-wrap">
+            <input id="register-email" name="register-email" type="email" placeholder="Insira seu e-mail"
+              autocomplete="off">
+          </div>
+          <span>
+            <img src="/img/error-circle.svg" alt="error circle">
+            <p>Insira um e-mail válido.</p>
+          </span>
+        </div>
+        <div id="register-psw-field" class="input-field">
+          <label for="register-psw">Senha</label>
+          <div class="input-wrap">
+            <input id="register-psw" name="register-psw" type="password" placeholder="Insira sua senha"
+              autocomplete="off">
+            <img id="register-eye-icon" src="/img/eye-close.svg" alt="eye icon">
+          </div>
+          <span>
+            <img src="/img/error-circle.svg" alt="error circle">
+            <p>Insira pelo menos 8 caracteres com números, símbolos, letras maiúsculas e minúsculas.</p>
+          </span>
+        </div>
+        <div id="c-register-psw-field" class="input-field">
+          <label for="c-register-psw">Confirmar Senha</label>
+          <div class="input-wrap">
+            <input id="c-register-psw" name="c-register-psw" type="password" placeholder="Confirme sua senha"
+              autocomplete="off">
+            <img id="c-register-eye-icon" src="/img/eye-close.svg" alt="eye icon">
+          </div>
+          <span>
+            <img src="/img/error-circle.svg" alt="error circle">
+            <p>As senhas não conferem.</p>
+          </span>
+        </div>
+        <button type="submit">Cadastrar</button>
+        <p>Ao se registrar, você aceita nossos <a href="#">termos de uso</a> e a nossa <a href="#">política de
+            privacidade</a>.</p>
+      </form>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>

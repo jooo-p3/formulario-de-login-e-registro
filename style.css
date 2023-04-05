@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #5138ed;
+  --black: #141321;
+  --gray: #b4b8c5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  text-decoration: none;
+  outline: none;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+a,
+input,
+label,
+span {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+label,
+span,
+p {
+  color: var(--black);
+}
+
+a {
+  color: var(--primary-color);
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #dce0fe;
+}
+
+.form-container {
+  width: 30rem;
+  padding: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.form-login-container {
+  z-index: 2;
+}
+
+.form-register-container {
+  z-index: 1;
+  opacity: 0;
+}
+
+.form-header img {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.25rem;
+  color: var(--black);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-field span {
+  display: none;
+  align-items: center;
+  gap: 0.3rem;
+  color: #d93025;
+}
+
+.input-field span p {
+  color: #d93025;
+}
+
+.input-field span img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+#psw-field span {
+  align-items: flex-start;
+}
+
+#psw-field span p {
+  margin-top: 0.15rem;
+}
+
+.input-wrap {
+  height: 3.32rem;
+  position: relative;
+}
+
+.input-wrap input {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  border: 1px solid var(--gray);
+  border-radius: 0.5rem;
+}
+
+input::placeholder {
+  color: var(--gray);
+}
+
+.input-wrap input:focus {
+  border-bottom-width: 2px;
+}
+
+.input-wrap img {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+}
+
+.psw-wrap {
+  margin-top: -1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+}
+
+input[type="checkbox"]+label::before,
+input[type="checkbox"]:checked+label::before {
+  content: "";
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-bottom: -0.3rem;
+  margin-right: 0.3rem;
+  display: inline-block;
+  background: url(/img/checkbox-unchecked.svg) no-repeat;
+  background-size: cover
+}
+
+input[type="checkbox"]:checked+label::before {
+  background: url(/img/checkbox-checked.svg) no-repeat;
+  background-size: cover
+}
+
+.psw-wrap label {
+  margin-left: -0.4rem;
+  cursor: pointer;
+}
+
+.psw-wrap div:last-child {
+  margin-top: 0.1rem;
+}
+
+button {
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  padding: 1.1rem;
+  color: #fff;
+  background-color: var(--primary-color);
+}
+
+button[type="submit"]:hover {
+  background-color: #4d35e1;
+}
+
+button[type="button"] {
+  padding: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--black);
+  border: 1px solid var(--gray);
+  background-color: #fff;
+}
+
+button[type="button"] img {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.line {
+  position: relative;
+  height: 1px;
+  background-color: var(--gray);
+}
+
+.line::before {
+  content: "ou";
+  padding: 0.7rem;
+  margin-top: -0.1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 1rem;
+  transform: translate(-50%, -50%);
+  color: var(--gray);
+  background-color: #fff;
+}
+
+button[type="submit"]+p {
+  text-align: center;
+}
+
+/*Change Form*/
+main.active .form-login-container {
+  opacity: 0;
+}
+
+main.active .form-register-container {
+  z-index: 3;
+  opacity: 1;
+}
+
+/*Form Validation*/
+.invalid span {
+  display: flex;
+}
+
+@media screen and (max-width: 600px) {
+  .form-container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    border-radius: 0;
+  }
+}
